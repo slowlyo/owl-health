@@ -1,0 +1,39 @@
+{
+    "name": "slowlyo/owl-health",
+    "alias": "环境检测",
+    "description": "基于 spatie/laravel-health 的环境检测插件",
+    "type": "library",
+    "version": "1.0.0",
+    "keywords": [
+        "owl-admin",
+        "extension"
+    ],
+    "homepage": "https://github.com/slowlyo/owl-health",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "slowlyo",
+            "email": "slowlyo_email@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "slowlyo/owl-admin": "*",
+        "spatie/laravel-health": "*",
+        "spatie/cpu-load-health-check": "*",
+        "doctrine/dbal": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Slowlyo\\OwlHealth\\": "src/"
+        }
+    },
+    "extra": {
+        "owl-admin": "Slowlyo\\OwlHealth\\OwlHealthServiceProvider",
+        "laravel": {
+            "providers": [
+                "Slowlyo\\OwlHealth\\OwlHealthServiceProvider"
+            ]
+        }
+    }
+}
